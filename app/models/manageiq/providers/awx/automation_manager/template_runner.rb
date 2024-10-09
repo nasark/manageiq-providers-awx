@@ -132,7 +132,8 @@ class ManageIQ::Providers::Awx::AutomationManager::TemplateRunner < ::Job
       :role        => 'ems_operations',
       :zone        => zone || job_template.manager.my_zone,
       :args        => args,
-      :deliver_on  => deliver_on
+      :deliver_on  => deliver_on,
+      :task_id     => nil
     )
   end
 
